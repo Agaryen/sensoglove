@@ -36,5 +36,5 @@ class SensoGlove:
         if data is None:
             return
         self.hand = Hand(data)
-        self.battery = data['battery']
-        self.temperature = data['temperature']
+        self.battery = data['data']['battery']
+        self.temperature = data['data']['temperature']
