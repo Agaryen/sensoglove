@@ -1,6 +1,6 @@
-from palm import Palm
-from wrist import Wrist
-from fingers import Fingers
+from .palm import Palm
+from .wrist import Wrist
+from .fingers import Fingers
 
 class Hand:
     def __init__(self, data):

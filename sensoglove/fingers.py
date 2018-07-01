@@ -1,4 +1,4 @@
-from rotation import Rotation
+from .rotation import Rotation
 
 class Thumb:
     def __init__(self, data):

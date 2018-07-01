@@ -1,4 +1,4 @@
-from rotation import Rotation
+from .rotation import Rotation
 
 class Speed:
     def __init__(self, x=None, y=None, z=None):
