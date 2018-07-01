@@ -31,7 +31,7 @@ class SensoGlove:
             self.connection_error = err
             raise
 
-    def set_data(self):
+    def refresh_data(self):
         data = read_json_payload(self.socket)
         if data is None:
             return
