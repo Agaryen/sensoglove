@@ -1,2 +1,4 @@
 # senso-glove
-Python Wrapper Module for SensoGloves
+Python module to abstract interactions with SensoGloves
+
+[Senso Official WebSite](http://senso.me/)
