@@ -38,3 +38,9 @@ class SensoGlove:
         self.hand = Hand(data)
         self.battery = data['data']['battery']
         self.temperature = data['data']['temperature']
+
+    def send_vibration(self, fingers=[], duration=655, strength=9):
+        for finger in fingers:
+            payload = '{"dst": "%s","type": "vibration","data": {"type": "%s","dur": %s, "str": %s}}\n' % (self.src, finger, duration, strength)
+            payload = payload.encode('utf-8')
+            self.socket.send(payload)
