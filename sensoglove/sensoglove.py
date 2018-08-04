@@ -1,3 +1,4 @@
+import sys
 import socket
 from .hand import Hand
 
@@ -9,7 +10,6 @@ class SensoGlove:
         self.host = host
         self.port = port
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.connection_error = None
         self.hand = None
         self.src = None
         self.name = None
@@ -24,11 +24,12 @@ class SensoGlove:
             self.name = data['name']
 
     def connect(self):
+        self.socket.settimeout(5)
         try:
             self.socket.connect((self.host, self.port))
             self._init_header_props()
-        except ConnectionRefusedError as err:
-            self.connection_error = err
+        except Exception as err:
+            print('Socket connection failed with %s:%d.' % (self.host, self.port))
             raise
 
     def refresh_data(self):
