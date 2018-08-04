@@ -9,6 +9,7 @@ class Speed:
 class Palm:
     def __init__(self, data):
         palm = data['data']['palm']
+        self.data = palm
         self.rotation = Rotation(*palm['quat'][1:])
         self.speed = Speed(*palm['spd'])
         self.acceleration = Speed(*palm['acc'])

@@ -13,6 +13,7 @@ class Fingers:
         middle = data['data']['fingers'][2]
         third = data['data']['fingers'][3]
         little = data['data']['fingers'][4]
+        self.data = data['data']['fingers']
         self.thumb = Thumb(data)
         self.index = Rotation(pitch=index['ang'][0], yaw=index['ang'][1])
         self.middle = Rotation(pitch=middle['ang'][0], yaw=middle['ang'][1])

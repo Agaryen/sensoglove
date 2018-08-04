@@ -37,7 +37,7 @@ class SensoGlove:
         if data is None:
             return
         self.type = data['type']
-        if (self.type != 'position'):
+        if self.type != 'position':
             return
         self.battery = data['data']['battery']
         self.hand = Hand(data)
