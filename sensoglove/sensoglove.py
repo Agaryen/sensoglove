@@ -36,8 +36,11 @@ class SensoGlove:
         data = read_json_payload(self.socket)
         if data is None:
             return
-        self.hand = Hand(data)
+        self.type = data['type']
+        if (self.type != 'position'):
+            return
         self.battery = data['data']['battery']
+        self.hand = Hand(data)
         self.temperature = data['data']['temperature']
 
     def send_vibration(self, fingers=[], duration=655, strength=9):
