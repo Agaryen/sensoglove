@@ -13,4 +13,3 @@ class Palm:
         self.rotation = Rotation(*palm['quat'][1:])
         self.speed = Speed(*palm['spd'])
         self.acceleration = Speed(*palm['acc'])
-        self.accuration = palm['accuracy']
