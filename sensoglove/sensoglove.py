@@ -32,7 +32,7 @@ class SensoGlove:
             print('Socket connection failed with %s:%d.' % (self.host, self.port))
             raise
 
-    def refresh_data(self):
+    def fetch_data(self):
         data = read_json_payload(self.socket)
         if data is None:
             return
