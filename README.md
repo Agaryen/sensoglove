@@ -99,6 +99,7 @@ while 1:
 #### Properties
 
 * `thumb` {`Rotation Object`} - Rotation of the thumb
+* `index` {`Rotation Object`} - Rotation of the index
 * `middle` {`Rotation Object`} - Rotation of the middle finger
 * `third` {`Rotation Object`} - Rotation of the third finger
 * `little` {`Rotation Object`} - Rotation of the little finger
