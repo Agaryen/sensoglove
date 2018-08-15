@@ -3,7 +3,7 @@ from .rotation import Rotation
 class Thumb:
     def __init__(self, data):
         thumb = data['data']['fingers'][0]
-        self.rotation = Rotation(*thumb['quat'][1:])
+        self.rotation = Rotation(pitch=thumb['ang'][0], yaw=thumb['ang'][1])
         self.bend = thumb['bend']
 
 

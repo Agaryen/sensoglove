@@ -67,8 +67,8 @@ while 1:
 
 * `type` {`String`} - Hand type (`lh`/`rh` for left-hand/right-hand)
 * `palm` {`Palm Object`} - Palm Object containing palm's informations
-* `wrist` {`Wrist Object`} - Palm Object containing palm's informations
-* `fingers` {`Fingers Object`} - Palm Object containing palm's informations
+* `wrist` {`Wrist Object`} - Wrist Object containing wrist's informations
+* `fingers` {`Fingers Object`} - Fingers Object containing fingers' informations
 
 ### Palm
 
@@ -98,8 +98,7 @@ while 1:
 
 #### Properties
 
-* `thumb` {`Rotation Object`} - Rotation of the thumb
-* `index` {`Rotation Object`} - Rotation of the index
+* `thumb` {`Thumb Object`} - Thumb Object containing Thumb informations
 * `middle` {`Rotation Object`} - Rotation of the middle finger
 * `third` {`Rotation Object`} - Rotation of the third finger
 * `little` {`Rotation Object`} - Rotation of the little finger
@@ -108,6 +107,12 @@ while 1:
 #### Notes
 
 Roll property is not set in Rotation Object that represent finger rotation, as usually human cannot rotate finger in that axis.
+
+### Thumb
+
+* `rotation` {`Rotation Object`} - Rotation of the thumb
+* `bend` {`Integer`} - Bending of the distal phalanx of the thumb
+
 
 ### Rotation
 
